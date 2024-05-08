@@ -9,7 +9,7 @@ import streamlit as st
 
 logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 logging.getLogger().addHandler(logging.StreamHandler(stream=sys.stdout))
-os.environ["OPENAI_API_KEY"] = "sk-proj-dDu3AWI1Keq4UZwxfKDrT3BlbkFJ71rGMYpzBJhdZa14x0dO"
+key = os.environ["OPENAI_API_KEY"]
 
 
 # Test on some sample data
