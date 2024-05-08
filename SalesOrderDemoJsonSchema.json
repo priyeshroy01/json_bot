@@ -1,0 +1,201 @@
+{
+	"$schema": "http://json-schema.org/draft-07/schema#",
+	"description": "Schema for a sales details",
+	"type": "object",
+	"properties": {
+		"Header": {
+			"type": "object",
+			"properties": {
+				"SalesOrg": {"description": "", "type": "string"},
+				"Trademark": {"description": "", "type": "string"},
+				"SalesOrderNumber": {"description": "", "type": "string"},
+				"OrderType": {"description": "", "type": "string"},
+				"SalesDocumentVersionNumber": {"description": "", "type": "string"},
+				"SalesOfficeNumber": {"description": "", "type": "string"},
+				"OrderDate": {"description": "", "type": "string"},
+				"JobName": {"description": "", "type": "string"},
+				"PurchaseOrderNumber": {"description": "", "type": "string"},
+				"CustomerPurchaseOrderNumber": {"description": "", "type": "string"},
+				"SalesPersonId": {"description": "", "type": "string"},
+				"SalesPersonName": {"description": "", "type": "string"},
+				"SalesPersonEmail": {"description": "", "type": "string"},
+				"Z5PartnerNumber": {"description": "", "type": "string"},
+				"Incoterms": {"description": "", "type": "string"},
+				"OrderTotal": {"description": "", "type": "string"},
+				"Currency": {"description": "", "type": "string"},
+				"PricingProcedure": {"description": "", "type": "string"},
+				"InternationalOrder": {"description": "", "type": "string"},
+			}
+		},
+		
+		"Partners": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"PartnerId": {"description": "", "type": "string"},
+					"PartnerType": {"description": "", "type": "string"},
+					"Name": {"description": "", "type": "string"},
+					"Company": {"description": "", "type": "string"},
+					"AddressLine1": {"description": "", "type": "string"},
+					"AddressLine2": {"description": "", "type": "string"},
+					"AddressLine3": {"description": "", "type": "string"},
+					"AddressLine4": {"description": "", "type": "string"},
+					"Country": {"description": "", "type": "string"},
+					"State": {"description": "", "type": "string"},
+					"City": {"description": "", "type": "string"},
+					"Zip": {"description": "", "type": "string"},
+					"Fax": {"description": "", "type": "string"},
+					"Phone": {"description": "", "type": "string"},
+					"Email": {"description": "", "type": "string"},
+				}
+			}
+		},
+		
+		"Notes": {
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"NoteTypeCode": {"description": "", "type": "string"},
+					"NoteTypeDescription": {"description": "", "type": "string"},
+					"Note": {"description": "", "type": "string"}
+				}
+			}
+		},
+		"DeliveryGroups": {
+			"description": "",
+			"type": "array",
+			"items": {
+				"type": "object",
+				"properties": {
+					"DeliveryGroupNumber": {"description": "", "type": "string"},
+					"DeliveryPriority": {"description": "", "type": "string"},
+					"DeliveryPriorityDescription": {"description": "", "type": "string"},
+					"MessageText": {"description": "", "type": "string"},
+					"OverallStatus": {"description": "", "type": "string"},
+					"OverallStatusAdditionalText": {"description": "", "type": "string"},
+					"HoldStatus": {"description": "", "type": "string"},
+					"PromiseDate": {"description": "", "type": "string"},
+					"RepromiseDate": {"description": "", "type": "string"},
+					
+					"Lines": {
+						"description": "",
+						"type": "array",
+						"items": {
+							"type": "object",
+							"properties": {
+								"SalesOrderLineNumber ": {"description": "", "type": "string"},
+								"SalesOffice ": {"description": "", "type": "string"},
+								"SalesGroup ": {"description": "", "type": "string"},
+								"Model ": {"description": "", "type": "string"},
+								"ShortModelName ": {"description": "", "type": "string"},
+								"OrderedQuantity ": {"description": "", "type": "string"},
+								"ItemCategory ": {"description": "", "type": "string"},
+								"ProductClass ": {"description": "", "type": "string"},
+								"Mark ": {"description": "", "type": "string"},
+								"Material ": {"description": "", "type": "string"},
+								"MaterialDescription ": {"description": "", "type": "string"},
+								"PlantDescription ": {"description": "", "type": "string"},
+								"Division ": {"description": "", "type": "string"},
+								"CreditBlock ": {"description": "", "type": "string"},
+								"CreditBlockDescription ": {"description": "", "type": "string"},
+								"DeliveryBlock ": {"description": "", "type": "string"},
+								"RequestedDeliveryDate ": {"description": "", "type": "string"},
+								"BillingInvoiceDate ": {"description": "", "type": "string"},
+								"ProcessingStatus ": {"description": "", "type": "string"},
+								"MaterialGroup ": {"description": "", "type": "string"},
+								"PlantNumber ": {"description": "", "type": "string"},
+								"HigherLevelSalesOrderLine ": {"description": "", "type": "string"},
+								"DiscountRequestNumber ": {"description": "", "type": "string"},
+								"PricingCategory ": {"description": "", "type": "string"},
+								"RejectCode ": {"description": "", "type": "string"},
+								"MarkTags": {
+									"description": "",
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"Tag": {"description": "", "type": "string"},
+											"TagName": {"description": "", "type": "string"}
+										}
+									}
+								},
+								"Multiplier ": {"description": "", "type": "string"},
+								"TotalListPrice ": {"description": "", "type": "string"},
+								"TotalNetPrice ": {"description": "", "type": "string"},
+								"TotalBillingPrice ": {"description": "", "type": "string"},
+								"TotalDiscountPrice ": {"description": "", "type": "string"}
+							}
+							
+						}
+					},
+					"Shipments": {
+						"description": "",
+						"type": "array",
+						"items": {
+							"type": "object",
+							"properties": {
+								"OutboundNumber": {"description": "", "type": "string"},
+								"ShipmentNumber": {"description": "", "type": "string"},
+								"DeliveryGroupNumber": {"description": "", "type": "string"},
+								"GoodsIssueDate": {"description": "", "type": "string"},
+								"CarrierCode": {"description": "", "type": "string"},
+								"CarrierName": {"description": "", "type": "string"},
+								"CarrierUrl": {"description": "", "type": "string"},
+								"CarrierScacCode": {"description": "", "type": "string"},
+								"OutboundCreationDate": {"description": "", "type": "string"},
+								"ShipmentType": {"description": "", "type": "string"},
+								"ShipmentTypeDescription": {"description": "", "type": "string"},
+								"EquipmentTypeCode": {"description": "", "type": "string"},
+								"EquipmentTypeDescription": {"description": "", "type": "string"},
+								"ShippingPlant": {"description": "", "type": "string"},
+								"ShippingPlantDescription": {"description": "", "type": "string"},
+								"EchoShippingAccountNumber": {"description": "", "type": "string"},
+								"ForwardingAgent": {"description": "", "type": "string"},
+								"ForwardingAgentTrackingId": {"description": "", "type": "string"},
+								"ShipmentTrackingNumber": {"description": "", "type": "string"},
+								"LoadOnDate": {"description": "", "type": "string"},
+								"ShipmentDescription": {"description": "", "type": "string"},
+								"ExternalIdentification1": {"description": "", "type": "string"},
+								"ExternalIdentification2": {"description": "", "type": "string"},
+								"ShipmentText": {"description": "", "type": "string"},
+								"ShipmentStatus": {"description": "", "type": "string"},
+								"EstimatedDeliveryDate": {"description": "", "type": "string"},
+								"DepartedDate": {"description": "", "type": "string"},
+								"LoadIndicator": {"description": "", "type": "string"},
+								
+								"Lines": {
+									"description": "",
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"SalesOrderLineNumber": {"description": "Reference to the lines which indicate the sub-package in the delivery group", "type": "string"},
+											"ShippedQuantity": {"description": "total shipped quantity for the line number", "type": "integer"}
+										}
+									}
+								},
+								"DeliveryNotes": {
+									"description": "",
+									"type": "array",
+									"items": {
+										"type": "object",
+										"properties": {
+											"NoteCode": {"description": "", "type": "string"},
+											"NoteDesc": {"description": "", "type": "string"},
+											"City": {"description": "", "type": "string"},
+											"State": {"description": "", "type": "string"},
+											"Timestamp": {"description": "", "type": "string"}
+										}
+
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
